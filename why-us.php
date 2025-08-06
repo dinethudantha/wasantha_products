@@ -11,6 +11,11 @@
                     <p>
                         Our prices, quality, and taste are unmatched by any other company. With distribution to agencies across the entire island, we ensure that everyone in Sri Lanka can enjoy the very best in snack foods.
                     </p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="p-2 me-2 d-flex align-items-center justify-content-center" style="border: 1px solid white; border-radius: 50%; Width: 40px; height: 40px;"><a href="" style="color: white;"><i class="fa-brands fa-facebook-f"></i></a></div>
+                        <div class="p-2 me-2 d-flex align-items-center justify-content-center" style="border: 1px solid white; border-radius: 50%; Width: 40px; height: 40px;"><a href="" style="color: white;"><i class="fa-brands fa-instagram"></i></a></div>
+                        <div class="p-2 me-2 d-flex align-items-center justify-content-center" style="border: 1px solid white; border-radius: 50%; Width: 40px; height: 40px;"><a href="" style="color: white;"><i class="fa-brands fa-tiktok"></i></a></div>
+                    </div>
                     <div class="text-center">
                         <a href="#" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
                     </div>

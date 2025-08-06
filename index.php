@@ -42,9 +42,9 @@
 <body class="index-page">
 
   <?php
-  
-    include_once("header.php");
-  
+
+  include_once("header.php");
+
   ?>
 
   <header id="header" class="header d-flex align-items-center sticky-top" style="display: none !important;">
@@ -94,38 +94,12 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <div class="container">
-        <div class="row gy-4 justify-content-center justify-content-lg-between">
-          <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h3>Passionate About Taste</h3>
-            <h1 data-aos="fade-up">WASANTHA PRODUCTS<br></h1>
-            <p data-aos="fade-up" data-aos-delay="100">We are the Sri Lankan Snacks & Sweets manufacturing and distributing company.</p>
-            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-              <a href="#book-a-table" class="btn-get-started">Get In Touch</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-            </div>
-          </div>
-          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
+    <?php
+    include_once('hero-section.php')
+    ?>
 
     <!-- About Section -->
     <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <!-- <div class="container section-title" data-aos="fade-up">
-        <h2>About Us<br></h2>
-        <p><span>Why We Are Special</span> <span class="description-title"></span></p>
-      </div> -->
-      <!-- End Section Title -->
-
       <div class="container">
 
         <div class="row gy-4">
@@ -144,6 +118,7 @@
               <p class="fst-italic">
                 We are proud to be one of Sri Lanka’s leading snack food manufacturers with over 36 years of experience. Specializing in favorites like mixture murukku, garlic murukku, and many more, we deliver premium quality snacks loved for their authentic taste and consistent quality. Our commitment to tradition and excellence has made us a trusted name in households and stores across the island.
               </p>
+              
               <!-- <ul>
                 <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
                 <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
@@ -155,7 +130,7 @@
               </p> -->
 
               <div class="position-relative mt-4">
-                <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/about-img.jpeg" class="img-fluid" alt="">
                 <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
               </div>
             </div>
@@ -184,142 +159,9 @@
 
     ?>
 
-    
-
-    
-
-    <!-- Chefs Section -->
-    <section id="chefs" class="chefs section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>chefs</h2>
-        <p><span>Our</span> <span class="description-title">Proffesional Chefs<br></span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Master Chef</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-              </div>
-            </div>
-          </div><!-- End Chef Team Member -->
-
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Patissier</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-              </div>
-            </div>
-          </div><!-- End Chef Team Member -->
-
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cook</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
-              </div>
-            </div>
-          </div><!-- End Chef Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Chefs Section -->
 
     <!-- Book A Table Section -->
-    <section id="book-a-table" class="book-a-table section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Book A Table</h2>
-        <p><span>Book Your</span> <span class="description-title">Stay With Us<br></span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);"></div>
-
-          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" required="">
-                </div>
-              </div>
-
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-              </div>
-
-              <div class="text-center mt-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
-                <button type="submit">Book a Table</button>
-              </div>
-            </form>
-          </div><!-- End Reservation Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Book A Table Section -->
+    <!-- /Book A Table Section -->
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section light-background">
@@ -364,14 +206,14 @@
             }
           </script>
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpeg"><img src="assets/img/gallery/gallery-1.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpeg"><img src="assets/img/gallery/gallery-2.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpeg"><img src="assets/img/gallery/gallery-3.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpeg"><img src="assets/img/gallery/gallery-4.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpeg"><img src="assets/img/gallery/gallery-5.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpeg"><img src="assets/img/gallery/gallery-6.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpeg"><img src="assets/img/gallery/gallery-7.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpeg"><img src="assets/img/gallery/gallery-8.jpeg" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -386,14 +228,18 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p><span>Need Help?</span> <span class="description-title">Contact Us</span></p>
+        <p>Get In Touch</span></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="mb-5">
+        <!-- <div class="mb-5">
           <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
-        </div><!-- End Google Maps -->
+        </div>End Google Maps -->
+
+        <div class="mb-4">
+          <iframe style="width: 100%; height: 400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=No%2007,%2070%20Acres,%20Yudhaganawa,%20Hingurakgoda+(Wasantha%20Products)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/fr/calculer-la-population-sur-une-carte">Carte démographique</a></iframe>
+        </div>
 
         <div class="row gy-4">
 
@@ -402,7 +248,7 @@
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>No 07, 70 Acres, Yudhaganawa, Hingurakgoda</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -412,7 +258,7 @@
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+94 76 301 1685</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -422,7 +268,7 @@
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>wasanthaproducts47@gmail.com</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -432,7 +278,7 @@
               <i class="icon bi bi-clock flex-shrink-0"></i>
               <div>
                 <h3>Opening Hours<br></h3>
-                <p><strong>Mon-Sat:</strong> 11AM - 23PM; <strong>Sunday:</strong> Closed</p>
+                <p><strong>Mon-Sat:</strong> 09AM - 05PM; <strong>Sunday:</strong> Closed</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -475,68 +321,11 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
-              <strong>Sunday</strong>: <span>Closed</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Yummy</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
-
-  </footer>
+  <!-- Footer Start -->
+  <?php
+  include_once('footer.php')
+  ?>
+  <!-- Footer End -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
