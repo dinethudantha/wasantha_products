@@ -95,7 +95,7 @@
   <main class="main">
 
     <?php
-    include_once('hero-section.php')
+    include_once('hero-section-copy.php')
     ?>
 
     <!-- About Section -->

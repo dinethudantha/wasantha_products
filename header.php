@@ -2,8 +2,8 @@
     <div class="w-25 d-flex align-items-center px-5 py-4">
         <a href="" class="me-2"><img src="assets/img/Wasantha Products Gray Logo.png" width="70px"></a>
         <div>
-            <h3 style="line-height: 15px;">WASANTHA</h3>
-            <h3 style="line-height: 15px;">PRODUCTS</h3>
+            <h3 style="line-height: 15px; font-weight: 700;">WASANTHA</h3>
+            <h3 style="line-height: 15px; font-weight: 700;">PRODUCTS</h3>
         </div>
     </div>
     <div class="w-75 d-flex flex-column">
