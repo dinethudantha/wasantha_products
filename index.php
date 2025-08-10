@@ -30,6 +30,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/css/main-section.css">
+
+
   <!-- =======================================================
   * Template Name: Yummy
   * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
@@ -37,13 +40,19 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
+
+
 </head>
 
 <body class="index-page">
 
+  <!-- Here the main section -->
+
   <?php
 
-  include_once("header.php");
+  include_once("main-section.php");
 
   ?>
 
@@ -51,8 +60,6 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <img src="assets/img/Wasantha Products Gray Logo.png" style="width: 75px; height: 75px !important;" alt="">
 
       </a>
@@ -93,11 +100,6 @@
   </header>
 
   <main class="main">
-
-    <?php
-    include_once('hero-section-copy.php')
-    ?>
-
     <!-- About Section -->
     <section id="about" class="about section">
       <div class="container">
@@ -155,7 +157,7 @@
 
     <?php
 
-    include_once("products.php");
+    include_once("products-section.php");
 
     ?>
 
@@ -228,7 +230,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Get In Touch</span></p>
+        <p><span>Get</span><span class="description-title">In Touch</span></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
