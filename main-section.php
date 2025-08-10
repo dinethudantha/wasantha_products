@@ -57,9 +57,9 @@
                     bringing you authentic flavors and traditional recipes crafted with love and quality ingredients.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
+                    <a href="tel:+94763011685" class="btn btn-primary">
                         <i class="fas fa-phone"></i>
-                        Get In Touch
+                        Call Now
                     </a>
                     <a href="#video" class="btn btn-secondary">
                         <i class="fas fa-play"></i>
@@ -68,28 +68,26 @@
                 </div>
             </div>
 
-            <div class="product-showcase">
+            <div class="product-showcase animation-floating">
                 <div class="product-circle" style="background: linear-gradient(45deg, #ff6b35, #f7931e);">
-                    <img src="assets/img/Plates/plate1.png"  alt="">
+                    <img src="assets/img/Plates/plate1.png" alt="">
                 </div>
-                <div class="product-circle" style="background: linear-gradient(45deg, #ff9500, #ffb347);">
-                    <img src="assets/img/Plates/plate2.png"  alt="">
+                <div class="product-circle" style="background: linear-gradient(45deg, #ff9500, #ffb347); ">
+                    <img src="assets/img/Plates/plate2.png" alt="">
                 </div>
                 <div class="product-circle" style="background: linear-gradient(45deg, #d2691e, #cd853f);">
-                    <img src="assets/img/Plates/plate3.png"  alt="">
+                   <img src="assets/img/Plates/plate3.png" alt="">
                 </div>
-                <div class="product-circle" style=" background: linear-gradient(45deg, #ff8c00, #ffa500);">
-                     <img src="assets/img/Plates/plate4.png"  alt="">
+                <div class="product-circle" style="background: linear-gradient(45deg, #ff8c00, #ffa500); ">
+                    <img src="assets/img/Plates/plate4.png" alt="">
                 </div>
                 <div class="product-circle" style="background: linear-gradient(45deg, #b8860b, #daa520);">
-                    <img src="assets/img/Plates/plate5.png"  alt="">
+                    <img src="assets/img/Plates/plate5.png" alt="">
                 </div>
-                <div class="product-circle" style="background: linear-gradient(45deg, #ff6347, #ff7f50);">
-                    <img src="assets/img/Plates/plate6.png"  alt="">
+                <div class="product-circle" style=" background: linear-gradient(45deg, #ff6347, #ff7f50); ">
+                    <img src="assets/img/Plates/plate6.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-

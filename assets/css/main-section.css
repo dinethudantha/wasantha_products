@@ -246,8 +246,8 @@ nav {
 }
 
 .product-circle {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -256,11 +256,13 @@ nav {
   justify-content: center;
   position: absolute;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .product-circle:hover {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(1.15) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 
 .product-circle img {
@@ -268,6 +270,360 @@ nav {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
+}
+
+/* Animation Styles */
+
+/* 1. Orbital Rotation Animation */
+.animation-orbital .product-showcase {
+  animation: orbitalContainer 20s linear infinite;
+}
+
+.animation-orbital .product-circle {
+  animation: orbitalReverse 20s linear infinite;
+}
+
+@keyframes orbitalContainer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitalReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* 2. Floating Animation */
+.animation-floating .product-circle:nth-child(1) {
+  animation: float1 4s ease-in-out infinite;
+}
+.animation-floating .product-circle:nth-child(2) {
+  animation: float2 4.5s ease-in-out infinite;
+}
+.animation-floating .product-circle:nth-child(3) {
+  animation: float3 3.5s ease-in-out infinite;
+}
+.animation-floating .product-circle:nth-child(4) {
+  animation: float4 4.2s ease-in-out infinite;
+}
+.animation-floating .product-circle:nth-child(5) {
+  animation: float5 3.8s ease-in-out infinite;
+}
+.animation-floating .product-circle:nth-child(6) {
+  animation: float6 5s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+}
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+@keyframes float4 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+@keyframes float5 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-22px);
+  }
+}
+@keyframes float6 {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-30px);
+  }
+}
+
+/* 3. Pulsing Scale Animation */
+.animation-pulse .product-circle:nth-child(1) {
+  animation: pulse1 3s ease-in-out infinite;
+}
+.animation-pulse .product-circle:nth-child(2) {
+  animation: pulse2 3.5s ease-in-out infinite;
+}
+.animation-pulse .product-circle:nth-child(3) {
+  animation: pulse3 2.8s ease-in-out infinite;
+}
+.animation-pulse .product-circle:nth-child(4) {
+  animation: pulse4 3.2s ease-in-out infinite;
+}
+.animation-pulse .product-circle:nth-child(5) {
+  animation: pulse5 2.5s ease-in-out infinite;
+}
+.animation-pulse .product-circle:nth-child(6) {
+  animation: pulse6 4s ease-in-out infinite;
+}
+
+@keyframes pulse1 {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+@keyframes pulse2 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+@keyframes pulse3 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+@keyframes pulse4 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+@keyframes pulse5 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+}
+@keyframes pulse6 {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+/* 4. Spinning Plates Animation */
+.animation-spin .product-circle {
+  animation: spin 8s linear infinite;
+}
+.animation-spin .product-circle:nth-child(2) {
+  animation-delay: -1s;
+}
+.animation-spin .product-circle:nth-child(3) {
+  animation-delay: -2s;
+}
+.animation-spin .product-circle:nth-child(4) {
+  animation-delay: -3s;
+}
+.animation-spin .product-circle:nth-child(5) {
+  animation-delay: -4s;
+}
+.animation-spin .product-circle:nth-child(6) {
+  animation-delay: -5s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 5. Wave Motion Animation */
+.animation-wave .product-circle:nth-child(1) {
+  animation: wave 2.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+.animation-wave .product-circle:nth-child(2) {
+  animation: wave 2.5s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.animation-wave .product-circle:nth-child(3) {
+  animation: wave 2.5s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.animation-wave .product-circle:nth-child(4) {
+  animation: wave 2.5s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+.animation-wave .product-circle:nth-child(5) {
+  animation: wave 2.5s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+.animation-wave .product-circle:nth-child(6) {
+  animation: wave 2.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) scale(1.05);
+  }
+  75% {
+    transform: translateY(5px) scale(0.98);
+  }
+}
+
+/* 6. Magnetic Attraction Animation */
+.animation-magnetic .product-circle:nth-child(1) {
+  animation: magnetic1 6s ease-in-out infinite;
+}
+.animation-magnetic .product-circle:nth-child(2) {
+  animation: magnetic2 7s ease-in-out infinite;
+}
+.animation-magnetic .product-circle:nth-child(3) {
+  animation: magnetic3 5.5s ease-in-out infinite;
+}
+.animation-magnetic .product-circle:nth-child(4) {
+  animation: magnetic4 6.5s ease-in-out infinite;
+}
+.animation-magnetic .product-circle:nth-child(5) {
+  animation: magnetic5 5.8s ease-in-out infinite;
+}
+.animation-magnetic .product-circle:nth-child(6) {
+  animation: magnetic6 8s ease-in-out infinite;
+}
+
+@keyframes magnetic1 {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+@keyframes magnetic2 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(-10px) translateY(-5px);
+  }
+}
+@keyframes magnetic3 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+@keyframes magnetic4 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(12px) translateY(6px);
+  }
+}
+@keyframes magnetic5 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(15px) translateY(-8px);
+  }
+}
+@keyframes magnetic6 {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* 7. Glow Pulse Animation */
+.animation-glow .product-circle {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.animation-glow .product-circle:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.animation-glow .product-circle:nth-child(3) {
+  animation-delay: 1s;
+}
+.animation-glow .product-circle:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.animation-glow .product-circle:nth-child(5) {
+  animation-delay: 2s;
+}
+.animation-glow .product-circle:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(255, 193, 7, 0.4),
+      0 0 30px rgba(255, 193, 7, 0.3);
+  }
 }
 
 /* Position circles in a flower pattern */
@@ -296,9 +652,57 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
+  width: 230px;
+  height: 230px;
   z-index: 2;
+}
+
+/* Animation Control Panel */
+.animation-controls {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  max-width: 200px;
+}
+
+.animation-controls h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.animation-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 5px 0;
+  background: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.animation-btn:hover {
+  background: #ffc107;
+  color: #333;
+}
+
+.animation-btn.active {
+  background: #ffc107;
+  color: #333;
+  border-color: #333;
+  font-weight: 600;
 }
 
 /* Mobile Menu */
@@ -382,7 +786,6 @@ nav {
     margin-top: 3rem;
     height: 300px;
   }
-
 }
 
 @media (max-width: 480px) {
