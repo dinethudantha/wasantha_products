@@ -48,13 +48,55 @@
 
 <body class="index-page">
 
-  <!-- Here the main section -->
+  <!-- Main Section -->
 
+  <!-- Top Bar -->
   <?php
-
-  include_once("../main-section.php");
-
+  include_once('../topbar.php');
   ?>
+
+  <!-- Nav Bar -->
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <img src="../assets/img/Wasantha Products Gray Logo.png" width="100%" alt="">
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">WASANTHA</span>
+          <span class="tagline">PRODUCTS</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="../">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#products" class="active">PRODUCTS</a></li>
+        <li><a href="#contact">GET IN TOUCH</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="d-flex align-items-center justify-content-center text-center bg-light w-100" style="height: 400px;">
+    <div class="hero-text d-flex flex-column align-items-center">
+      <h1 class="hero-title" style="font-weight: 800;">Our Products</h1>
+      <p class="hero-description" style="width: 65%;">
+        We are Sri Lanka's premium snacks & sweets manufacturing and distributing company,
+        bringing you authentic flavors and traditional recipes crafted with love and quality ingredients.
+      </p>
+      <small>HOME / PRODUCTS</small>
+    </div>
+  </div>
+
+  <!-- /Main Section -->
 
   <header id="header" class="header d-flex align-items-center sticky-top" style="display: none !important;">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -103,13 +145,6 @@
 
     <!-- Procuts Section -->
     <section class="section px-5">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>PRODUCTS</h2>
-        <p><span>Our</span><span class="description-title"> Products</span></p>
-      </div>
-      <!-- End Section Title -->
-
       <div class="container">
 
         <div class="products-grid" id="productsGrid">
@@ -370,13 +405,13 @@
       }
 
       grid.innerHTML = productsToShow.map(product => `
-                <div class="product-card" >
+                <div class="product-card" style="cursor: pointer;" >
                     <div class="product-image" style="background-image: url('../assets/img/Products/Snacks/${product.img}'); background-size: cover; background-position: center;">   
                     </div>
                     <div class="product-info">
-                        <h5 class="product-title">${product.title}</h5>
-                        <h2 class="product-title">${product.sinhalaName}</h2>
-                        <p class="product-description">${product.description}</p>
+                        <h5 class="product-title" style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);">${product.title}</h5>
+                        <h2 class="product-title" style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);">${product.sinhalaName}</h2>
+                        <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);">${product.description}</p>
                     </div>
                 </div>
             `).join('');

@@ -3,13 +3,13 @@
         <div class="top-bar-content">
             <div class="business-hours">
                 <i class="fas fa-clock"></i>
-                <span>09:00 am - 06:00 pm</span>
+                <span>Mon-Sat: 09AM - 05PM</span>
             </div>
             <div class="social-links">
                 <span>Follow Us:</span>
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/wasanthaproducts?mibextid=wwXIfr&mibextid=wwXIfr" title="Facebook" target="_blanck"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:wasanthaproducts47@gmail.com" title="Email" target="_blanck"><i class="fas fa-envelope"></i></a>
+                <a href="#" title="WhatsApp" target="_blanck"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </div>

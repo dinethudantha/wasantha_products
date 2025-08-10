@@ -4,7 +4,7 @@
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p><span>Get</span><span class="description-title">In Touch</span></p>
+        <p><span>Get</span><span class="description-title"> In Touch</span></p>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
