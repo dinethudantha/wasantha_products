@@ -1,49 +1,12 @@
 <!-- Top Bar -->
-<div class="top-bar">
-    <div class="container">
-        <div class="top-bar-content">
-            <div class="business-hours">
-                <i class="fas fa-clock"></i>
-                <span>09:00 am - 06:00 pm</span>
-            </div>
-            <div class="social-links">
-                <span>Follow Us:</span>
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+include_once('topbar.php');
+?>
 
 <!-- Header -->
-<header>
-    <nav class="container">
-        <a href="#" class="logo">
-            <div class="logo-icon">
-                <img src="assets/img/Wasantha Products Gray Logo.png" width="100%" alt="">
-            </div>
-            <div class="logo-text">
-                <span class="brand-name">WASANTHA</span>
-                <span class="tagline">PRODUCTS</span>
-            </div>
-        </a>
-
-        <ul class="nav-menu">
-            <li><a href="#home" class="active">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#products">PRODUCTS</a></li>
-            <li><a href="#contact">GET IN TOUCH</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-
-        <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-</header>
+<?php
+include_once('header.php');
+?>
 
 <!-- Hero Section -->
 <section class="hero">

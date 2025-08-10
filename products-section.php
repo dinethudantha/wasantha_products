@@ -95,7 +95,7 @@
     </div>
 
     <div class="d-flex w-100 align-items-center justify-content-center">
-        <a href="" class="btn btn-primary">View More&nbsp;<i class="fa-regular fa-circle-right" style="color: white;"></i></a>
+        <a href="./Pages/products.php" class="btn btn-primary">View More&nbsp;<i class="fa-regular fa-circle-right" style="color: white;"></i></a>
     </div>
 
 </section>
