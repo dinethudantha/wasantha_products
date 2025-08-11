@@ -29,7 +29,8 @@
                         <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                             <i class="fa-solid fa-hand-holding-dollar"></i>
                             <h4>Unbeatable Prices</h4>
-                            <p>ගුණාත්මකභාවය අඩු නොකර වෙළඳපොලේ ඇති වඩාත්ම තරඟකාරී මිල ගණන් අපි පිරිනමන්නෙමු.</p>
+                            <p>
+                                We offer the most competitive prices on the market without compromising on quality.</p>
                         </div>
                     </div><!-- End Icon Box -->
 
@@ -37,7 +38,7 @@
                         <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                             <i class="fa-solid fa-ranking-star"></i>
                             <h4>Premium Quality</h4>
-                            <p>ඉහළම ගුණාත්මක භාවයකින් යුත් නිෂ්පාදන අප පාරිභෝකියන්ට ලබා දීමට අප සෑම විටම කටයුතු කරන්නෙමු.</p>
+                            <p>We always strive to provide our customers with the highest quality products.</p>
                         </div>
                     </div><!-- End Icon Box -->
 
@@ -45,7 +46,7 @@
                         <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                             <i class="fa-solid fa-store"></i>
                             <h4>Island-wide Distribution</h4>
-                            <p>අපි ශ්‍රී ලංකාවේ සෑම අස්සක් මුල්ලක් නෑරම ආයතන වෙත සැපයුම් සපයන්නෙමු.</p>
+                            <p>We supply to agencies in every corner of Sri Lanka.</p>
                         </div>
                     </div><!-- End Icon Box -->
 

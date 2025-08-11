@@ -1,3 +1,11 @@
+<?php
+
+require_once('../inc/db.inc.php');
+$select = "SELECT * FROM products";
+$select_res = $conn->query($select);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +40,41 @@
   <link rel="stylesheet" href="../assets/css/main-section.css">
   <link rel="stylesheet" href="../assets/css/products-page.css">
 
+  <style>
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      width: 400px;
+      height: 80vh;
+      overflow: scroll;
+      max-width: 90%;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Yummy
@@ -42,8 +85,6 @@
   ======================================================== -->
 
 
-
-
 </head>
 
 <body class="index-page">
@@ -52,12 +93,12 @@
 
   <!-- Top Bar -->
   <?php
-  include_once('../topbar.php');
+  include_once('../components/topbar.php');
   ?>
 
   <!-- Nav Bar -->
   <header>
-    <nav class="container">
+    <nav class="container" style="z-index: 50;">
       <a href="#" class="logo">
         <div class="logo-icon">
           <img src="../assets/img/Wasantha Products Gray Logo.png" width="100%" alt="">
@@ -70,10 +111,10 @@
 
       <ul class="nav-menu">
         <li><a href="../">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
+        <li><a href="./about-us.php">ABOUT</a></li>
         <li><a href="./products.php" class="active">PRODUCTS</a></li>
-        <li><a href="#contact">GET IN TOUCH</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="./gallery.php">GALLERY</a></li>
+        <li><a href="./contact.php">CONTACT</a></li>
       </ul>
 
       <div class="mobile-menu-toggle">
@@ -92,7 +133,7 @@
         We are Sri Lanka's premium snacks & sweets manufacturing and distributing company,
         bringing you authentic flavors and traditional recipes crafted with love and quality ingredients.
       </p>
-      <small>HOME / PRODUCTS</small>
+      <small>HOME | PRODUCTS</small>
     </div>
   </div>
 
@@ -149,14 +190,69 @@
 
         <div class="products-grid" id="productsGrid">
           <!-- Products will be loaded here -->
+
+
+          <?php
+          if (mysqli_num_rows($select_res) > 0) {
+
+            while ($row = mysqli_fetch_assoc($select_res)) {
+              $imagePath = '../assets/img/Products/Snacks/' . $row['image_url'];
+              $imagePath = str_replace(' ', '%20', $imagePath); // Encode spaces
+              // Use htmlspecialchars to avoid HTML injection in attributes
+              $productName = htmlspecialchars($row['product_name']);
+              $productLocalName = htmlspecialchars($row['product_local_name']);
+              $description = htmlspecialchars($row['description']);
+
+
+
+              echo "
+                
+                  <div class='product-card'  style='cursor: pointer;' data-title='{$row['product_name']}' data-local='{$row['product_local_name']}' data-desc='{$row['description']}' data-desclocal='{$row['description_local']}' data-img='{$imagePath}'>
+                    <div class='product-image' style='background-image: url({$imagePath}); background-size: cover; background-position: center;'>
+                    </div>
+                    <div class='product-info'>
+                      <h5 class='product-title' style='display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);'>{$row['product_name']}</h5>
+                      <h2 class='product-title' style='display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);'>{$row['product_local_name']}</h2>
+                      <p style='display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);'>{$row['description']}</p>
+                    </div>
+                  </div>   
+
+                  <!-- Modal -->
+                  <div class='modal' id='productModal'>
+                    <div class='modal-content'>
+                     <span class='close-btn shadow' style='color: white;' id='closeModal'>&times;</span>
+                      <img id='modalImg' style='width:100%; border-radius:10px;'>
+                      <h5 id='modalTitle'></h5>
+                      <h2 id='modalTitleLocal'></h2>
+                      <p id='modalDesc'></p>
+                      <p id='modalDescLocal'></p>
+                    </div>
+                  </div>
+
+
+                ";
+            }
+          }
+          ?>
+
+
+
+
         </div>
+
+
+
       </div>
+
+
+
+
 
     </section>
 
     <!-- Contact Section -->
     <?php
-    include_once('../contact-us.php');
+    include_once('../components/contact-us.php');
     ?>
     <!-- /Contact Section -->
 
@@ -164,7 +260,7 @@
 
   <!-- Footer Start -->
   <?php
-  include_once('../footer.php')
+  include_once('../components/footer.php')
   ?>
   <!-- Footer End -->
 
@@ -186,216 +282,6 @@
   <script src="../assets/js/main.js"></script>
 
   <script>
-    const products = [{
-        id: 1,
-        img: "Mixture Murukku.jpeg",
-        title: "Mixture Murukku",
-        sinhalaName: "මික්ස්චර් මුරුක්කු",
-        description: "A flagship product with strong consumer demand. Our Mixture is a crunchy, flavorful blend made with gram flour, peanuts, green peas, lentils, garlic, chili powder, and seasoned with vegetable oil and permitted food colorings (E102, INS133). Available in Rs.20/-, Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.99,
-        originalPrice: 4.99,
-        category: "chips",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 128
-      },
-      {
-        id: 2,
-        img: "Garlic Murukku.jpeg",
-        title: "Garlik Murukku",
-        sinhalaName: "ගාර්ලික් මුරුක්කු",
-        description: "Highly popular among our customers, Garlic Bites are made from wheat flour, garlic powder, chili, salt, and water, and fried in vegetable oil to a perfect crisp. Available in Rs.20/-, Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 5.99,
-        originalPrice: null,
-        category: "cookies",
-        badge: "popular",
-        rating: 4.8,
-        reviews: 256
-      },
-      {
-        id: 3,
-        img: "Taste Cracker.jpeg",
-        title: "Taste Cracker",
-        sinhalaName: "ටේස්ට් ක්‍රැකර්",
-        description: "A top-seller known for its crisp texture and spicy taste. Made with wheat flour, vegetable oil, yeast, chili powder, salt, and permitted colorings (E102, E133). Available in Rs.20/-, Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 2.99,
-        originalPrice: null,
-        category: "candy",
-        badge: "new",
-        rating: 4.3,
-        reviews: 89
-      },
-      {
-        id: 4,
-        img: "Sugar Murukku.jpeg",
-        title: "Sugar Murukku",
-        sinhalaName: "සීනි මුරුක්කු",
-        description: "This colorful, sweet snack is a customer favorite, especially for its unique appearance and flavor. Made from wheat flour, vegetable oil, sugar, and salt, and colored with approved colorings (E102, E110, E133). Available only in 1kg packs in Green, Red, Yellow, and White.",
-        price: 8.99,
-        originalPrice: 10.99,
-        category: "nuts",
-        badge: "sale",
-        rating: 4.7,
-        reviews: 178
-      },
-      {
-        id: 5,
-        img: "Manioc Chips.jpeg",
-        title: "Manioc Chips",
-        sinhalaName: "මඤ්ඤොක්කා චිප්ස්",
-        description: "Prepared from premium cassava and seasoned with salt and chili powder, our manioc chips are fried in vegetable oil to give a distinct and satisfying crunch. Available in 1kg packs only.",
-        price: 4.49,
-        originalPrice: null,
-        category: "popcorn",
-        badge: "popular",
-        rating: 4.6,
-        reviews: 203
-      },
-      {
-        id: 6,
-        img: "Coil Murukku.jpeg",
-        title: "Coil Murukku",
-        sinhalaName: "කොයිල් මුරුක්කු",
-        description: "One of our most in-demand snacks, Coil Murukku is sold exclusively in bottles. Each bottle contains 80 pieces, priced at Rs.10/=. Made from rice flour, wheat flour, potato flour, vegetable oil, salt, chili powder, and permitted colorings (E102, INS133).",
-        price: 4.29,
-        originalPrice: null,
-        category: "chips",
-        badge: "new",
-        rating: 4.2,
-        reviews: 94
-      },
-      {
-        id: 7,
-        img: "Daiya Kokis.jpeg",
-        title: "Daiya Taste Kokis",
-        sinhalaName: "දයියා ටේස්ට් කොකිස්",
-        description: "A traditional delicacy crafted with a spicy twist. Our Kokis are made from rice flour, wheat flour, potato flour, vegetable oil, salt, chili powder, and permitted colorings (E102, INS133). No artificial flavorings added. Available only in bottles.",
-        price: 4.99,
-        originalPrice: null,
-        category: "cookies",
-        badge: null,
-        rating: 4.4,
-        reviews: 156
-      },
-      {
-        id: 8,
-        img: "Green Peas.jpeg",
-        title: "Grean Peas",
-        sinhalaName: "ග්‍රීන් පීස්",
-        description: "One of our longest-standing products, green peas are lightly seasoned and fried to crispy perfection. Though demand has grown gradually, it remains consistent. Made with green peas, vegetable oil, salt, and permitted coloring (E102, INS133). Available in Rs.20/-, Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 8,
-        img: "Green Peas.jpeg",
-        title: "Grean Peas",
-        sinhalaName: "ග්‍රීන් පීස්",
-        description: "One of our longest-standing products, green peas are lightly seasoned and fried to crispy perfection. Though demand has grown gradually, it remains consistent. Made with green peas, vegetable oil, salt, and permitted coloring (E102, INS133). Available in Rs.20/-, Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 9,
-        img: "Roasted Gram.jpeg",
-        title: "Roasted Gram",
-        sinhalaName: "රෝස්ටඩ් ග්‍රෑම්",
-        description: "The product that started it all. Our roasted gram remains a high-demand item, loved for its simplicity and flavor. Made with gram, turmeric powder, and salt. Available in Rs.20/-, Rs.50/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 10,
-        img: "Dhal Bites.jpeg",
-        title: "Dhal Bites",
-        sinhalaName: "පරිප්පු බයිට්",
-        description: "Another classic from our early days, Dhal Bites are made from high-quality dhal, chili powder, salt, and vegetable oil. A popular snack across all ages. Available in Rs.20/-, Rs.50/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 11,
-        img: "Daiya Taste Fried Peanuts.jpeg",
-        title: "Daiya Taste Fried Peanuts",
-        sinhalaName: "දයියා ටේස්ට් බැඳපු රටකජු",
-        description: "Our most premium product. Taste Peanuts are carefully prepared with peanuts, vegetable oil, salt, and chili powder. With exceptionally high and growing demand, they are available in Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 12,
-        img: "Ring Murukku.jpeg",
-        title: "Ring Murukku",
-        sinhalaName: "රින්ග් මුරුක්කු",
-        description: "A crispy and colorful snack loved by many. Made from wheat flour, chili, salt, vegetable oil, yeast, and permitted colorings (INS102, INS110). Available in Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 13,
-        img: "Ball Murukku.jpeg",
-        title: "Ball Murukku",
-        sinhalaName: "බෝල මුරුක්කු",
-        description: "Similar in taste and popularity to our Ring Bites, these are offered exclusively in 1kg packs. Made from wheat flour, chili, salt, vegetable oil, yeast, and permitted colorings (INS102, INS110).",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 14,
-        img: "Taste Gram.jpeg",
-        title: "Taste Gram",
-        sinhalaName: "ටේස්ට් ග්‍රෑම්",
-        description: "Although lower in demand, Taste Gram remains a staple product in our range. Made from gram, vegetable oil, salt, chili powder, and approved colorings (E102, INS133). Available in Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      },
-      {
-        id: 15,
-        img: "Sticks Murukku.jpeg",
-        title: "Sticks Murukku",
-        sinhalaName: "ස්ටික්ස් මුරුක්කු",
-        description: "A favorite snack with a distinct flavor unique to Wasantha Products. Made from wheat flour, vegetable oil, yeast, chili powder, salt, and permitted colorings (E102, E133). Available in Rs.50/-, Rs.100/-, and 1kg packs.",
-        price: 3.49,
-        originalPrice: 3.99,
-        category: "candy",
-        badge: "sale",
-        rating: 4.5,
-        reviews: 312
-      }
-    ];
-
     function renderProducts(productsToShow) {
       const grid = document.getElementById('productsGrid');
 
@@ -405,15 +291,7 @@
       }
 
       grid.innerHTML = productsToShow.map(product => `
-                <div class="product-card" style="cursor: pointer;" >
-                    <div class="product-image" style="background-image: url('../assets/img/Products/Snacks/${product.img}'); background-size: cover; background-position: center;">   
-                    </div>
-                    <div class="product-info">
-                        <h5 class="product-title" style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);">${product.title}</h5>
-                        <h2 class="product-title" style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);">${product.sinhalaName}</h2>
-                        <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;line-height: 1.4;max-height: calc(1.4em * 2);">${product.description}</p>
-                    </div>
-                </div>
+                
             `).join('');
     }
 
@@ -445,9 +323,28 @@
       });
     });
 
-    // Initial render
-    renderProducts(products);
+    // Model JS
+
+    const modal = document.getElementById("productModal");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll(".product-card").forEach(card => {
+      card.addEventListener("click", () => {
+        document.getElementById("modalTitle").innerText = card.dataset.title;
+        document.getElementById("modalTitleLocal").innerText = card.dataset.local;
+        document.getElementById("modalDesc").innerText = card.dataset.desc;
+        document.getElementById("modalDescLocal").innerText = card.dataset.desclocal;
+        document.getElementById("modalImg").src = card.dataset.img;
+        modal.style.display = "flex";
+      });
+    });
+
+    closeModal.addEventListener("click", () => modal.style.display = "none");
+    window.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
   </script>
+
 
 </body>
 

@@ -13,10 +13,10 @@
 
         <ul class="nav-menu">
             <li><a href="#home" class="active">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
+            <li><a href="pages/about-us.php">ABOUT</a></li>
             <li><a href="pages/products.php">PRODUCTS</a></li>
-            <li><a href="#contact">GET IN TOUCH</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="pages/gallery.php">GALLERY</a></li>
+            <li><a href="pages/contact.php">CONTACT</a></li>
         </ul>
 
         <div class="mobile-menu-toggle">
