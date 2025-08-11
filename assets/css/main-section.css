@@ -223,6 +223,8 @@ nav {
 
 .btn-primary:hover {
   transform: translateY(-2px);
+  background-color: white;
+  color: black;
   box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
 }
 
