@@ -71,7 +71,7 @@
       <ul class="nav-menu">
         <li><a href="../">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#products" class="active">PRODUCTS</a></li>
+        <li><a href="./products.php" class="active">PRODUCTS</a></li>
         <li><a href="#contact">GET IN TOUCH</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -85,7 +85,7 @@
   </header>
 
   <!-- Hero Section -->
-  <div class="d-flex align-items-center justify-content-center text-center bg-light w-100" style="height: 400px;">
+  <div class="d-flex align-items-center justify-content-center text-center bg-light w-100 shadow" style="height: 400px;">
     <div class="hero-text d-flex flex-column align-items-center">
       <h1 class="hero-title" style="font-weight: 800;">Our Products</h1>
       <p class="hero-description" style="width: 65%;">

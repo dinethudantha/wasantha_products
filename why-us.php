@@ -9,7 +9,7 @@
                 <div class="why-box">
                     <h3>Why Choose Us</h3>
                     <p>
-                        Our prices, quality, and taste are unmatched by any other company. With distribution to agencies across the entire island, we ensure that everyone in Sri Lanka can enjoy the very best in snack foods.
+                        Our prices, quality and taste are unmatched. With distribution to agencies all over the island, we ensure that everyone in Sri Lanka can enjoy the best snacks.
                     </p>
                     <div class="d-flex align-items-center mb-4">
                         <div class="p-2 me-2 d-flex align-items-center justify-content-center" style="border: 1px solid white; border-radius: 50%; Width: 40px; height: 40px;"><a href="" style="color: white;"><i class="fa-brands fa-facebook-f"></i></a></div>

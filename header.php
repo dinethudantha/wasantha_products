@@ -14,7 +14,7 @@
         <ul class="nav-menu">
             <li><a href="#home" class="active">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#products">PRODUCTS</a></li>
+            <li><a href="pages/products.php">PRODUCTS</a></li>
             <li><a href="#contact">GET IN TOUCH</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
