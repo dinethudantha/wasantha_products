@@ -1,7 +1,7 @@
 <!-- Products Section -->
 <section id="events" class="events section">
 
-    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid px-4" data-aos="fade-up" data-aos-delay="100">
 
         <div class="swiper init-swiper">
             <script type="application/json" class="swiper-config">
@@ -38,7 +38,7 @@
             <!-- End Section Title -->
 
 
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" >
                 <?php
                 if (mysqli_num_rows($select_res) > 0) {
                     while ($row = mysqli_fetch_assoc($select_res)) {
@@ -69,7 +69,7 @@
     </div>
 
     <div class="d-flex w-100 align-items-center justify-content-center">
-        <a href="./pages/products.php" class="btn btn-primary">View More&nbsp;<i class="fa-regular fa-circle-right" style="color: white;"></i></a>
+        <a href="./pages/products.php" class="btn btn-primary">View More <i class="fa-regular fa-circle-right"></i></a>
     </div>
 
 </section>

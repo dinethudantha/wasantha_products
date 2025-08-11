@@ -133,7 +133,8 @@ $select_res = $conn->query($select_que);
 
               <div class="position-relative mt-4">
                 <img src="assets/img/about-img.jpeg" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+                <!-- Play Button Here -->
+                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a> -->
               </div>
             </div>
           </div>

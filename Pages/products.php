@@ -221,7 +221,7 @@ $select_res = $conn->query($select);
                   <div class='modal' id='productModal'>
                     <div class='modal-content'>
                      <span class='close-btn shadow' style='color: white;' id='closeModal'>&times;</span>
-                      <img id='modalImg' style='width:100%; border-radius:10px;'>
+                      <div id='modalImg' style='width: 100%; aspect-ratio: 3/2; background-size: cover; background-position: center;'></div>
                       <h5 id='modalTitle'></h5>
                       <h2 id='modalTitleLocal'></h2>
                       <p id='modalDesc'></p>
@@ -334,7 +334,7 @@ $select_res = $conn->query($select);
         document.getElementById("modalTitleLocal").innerText = card.dataset.local;
         document.getElementById("modalDesc").innerText = card.dataset.desc;
         document.getElementById("modalDescLocal").innerText = card.dataset.desclocal;
-        document.getElementById("modalImg").src = card.dataset.img;
+        document.getElementById("modalImg").style.backgroundImage = `url('${card.dataset.img}')`;
         modal.style.display = "flex";
       });
     });

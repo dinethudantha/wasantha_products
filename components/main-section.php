@@ -13,7 +13,8 @@ include_once('header.php');
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-subtitle">Passionate About Taste</div>
+                <div class="hero-subtitle">රසට ඕනෑ..ම මිලක් <br>
+                    මිලට ඕනේ..ම ප්‍රමාණයක්</div>
                 <h1 class="hero-title" style="font-weight: 800;">WASANTHA<br>PRODUCTS</h1>
                 <p class="hero-description">
                     We are Sri Lanka's premium snacks & sweets manufacturing and distributing company,
@@ -24,9 +25,9 @@ include_once('header.php');
                         <i class="fas fa-phone"></i>
                         Call Now
                     </a>
-                    <a href="#video" class="btn btn-secondary">
-                        <i class="fas fa-play"></i>
-                        Watch Video
+                    <a href="./pages/products.php" class="btn btn-secondary">
+                        <i class="fa-solid fa-box"></i>
+                        Our Products
                     </a>
                 </div>
             </div>
@@ -39,7 +40,7 @@ include_once('header.php');
                     <img src="assets/img/Plates/plate2.png" alt="">
                 </div>
                 <div class="product-circle" style="background: linear-gradient(45deg, #d2691e, #cd853f);">
-                   <img src="assets/img/Plates/plate3.png" alt="">
+                    <img src="assets/img/Plates/plate3.png" alt="">
                 </div>
                 <div class="product-circle" style="background: linear-gradient(45deg, #ff8c00, #ffa500); ">
                     <img src="assets/img/Plates/plate4.png" alt="">
