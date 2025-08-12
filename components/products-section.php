@@ -1,5 +1,5 @@
 <!-- Products Section -->
-<section id="events" class="events section">
+<section id="events" class="events products section">
 
     <div class="container-fluid px-4" data-aos="fade-up" data-aos-delay="100">
 
@@ -68,7 +68,7 @@
 
     </div>
 
-    <div class="d-flex w-100 align-items-center justify-content-center">
+    <div class="viewmorebtn d-flex w-100 align-items-center justify-content-center">
         <a href="./pages/products.php" class="btn btn-primary">View More <i class="fa-regular fa-circle-right"></i></a>
     </div>
 

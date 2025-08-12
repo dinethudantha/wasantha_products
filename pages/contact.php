@@ -98,7 +98,7 @@ $select_res = $conn->query($select_que);
     <div class="d-flex align-items-center justify-content-center text-center bg-light w-100 shadow" style="height: 400px;">
         <div class="hero-text d-flex flex-column align-items-center">
             <h1 class="hero-title" style="font-weight: 800;">Contact Us</h1>
-            <p class="hero-description" style="width: 65%;">
+            <p class="hero-description" style="width: 65%; font-size: 16px;">
                 We are Sri Lanka's premium snacks & sweets manufacturing and distributing company,
                 bringing you authentic flavors and traditional recipes crafted with love and quality ingredients.
             </p>

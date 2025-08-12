@@ -827,7 +827,7 @@ section,
 
 .hero h1 {
   margin: 0;
-  font-size: 64px;
+  font-size: 3.5rem;
   font-weight: 700;
 }
 
@@ -890,11 +890,10 @@ section,
 
 @media (max-width: 640px) {
   .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 3.5rem;
   }
 
-  .hero p {
+  .hero p { 
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;

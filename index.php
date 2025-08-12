@@ -213,7 +213,7 @@ $select_res = $conn->query($select_que);
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="./assets/img/gallery/gallery-5.jpeg"><img src="./assets/img/gallery/gallery-5.jpeg" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="./assets/img/gallery/gallery-6.jpeg"><img src="./assets/img/gallery/gallery-6.jpeg" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="./assets/img/gallery/gallery-7.jpeg"><img src="./assets/img/gallery/gallery-7.jpeg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="./assets/img/gallery/gallery-7.jpeg"><img src="./assets/img/gallery/gallery-7.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="./assets/img/gallery/gallery-8.jpeg"><img src="./assets/img/gallery/gallery-8.jpeg" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
