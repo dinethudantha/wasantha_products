@@ -775,6 +775,10 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
+  .top-bar {
+    display: none !important;
+  }
+
   .nav-menu.active {
     display: flex;
   }
@@ -812,6 +816,10 @@ nav {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+  }
+
+  .product-showcase {
+    display: none;
   }
 
   .hero-text {
