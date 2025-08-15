@@ -16,7 +16,7 @@ include_once('header.php');
                 <div class="hero-subtitle" >Passionate About Taste</div>
                 <h1 class="hero-title" style="font-weight: 800;">WASANTHA<br>PRODUCTS</h1>
                 <div class="hero-subtitle" style="color: #2e3e4e !important;">රසට ඕනෑ..ම මිලක් <br>
-                    මිලට ඕනේ..ම ප්‍රමාණයක්</div>
+                    මිලට ඕනේ..ම ප්‍රමිතියක්</div>
                 <p class="hero-description" style="font-size: 16px;">
                     We are Sri Lanka's premium snacks & sweets manufacturing and distributing company,
                     bringing you authentic flavors and traditional recipes crafted with love and quality ingredients.
