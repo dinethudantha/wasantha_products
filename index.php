@@ -38,9 +38,9 @@ $select_res = $conn->query($select_que);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css?v=1.1" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/main-section.css">
+  <link rel="stylesheet" href="assets/css/main-section.css?v=1.1">
 
 
   <!-- =======================================================
